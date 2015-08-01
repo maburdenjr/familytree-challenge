@@ -5,5 +5,5 @@
     function FamilyTree($scope, $rootScope) {
 
     }
-    
+
 })();
