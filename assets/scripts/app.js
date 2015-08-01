@@ -34,6 +34,10 @@
                 grandChildArray[grandchildCount] = personName;
             })
             $scope.familytree.mostGrandchildren = grandChildArray[grandChildArray.length-1];
+
+            $scope.nosiblings = $scope.familytree.noSiblings.join(", ");
+            $scope.nochildren = $scope.familytree.noChildren.join(', ');
+            $scope.mostgrandchildren = $scope.familytree.mostGrandchildren;
         }
 
         $scope.updateTreeUi = function() {
@@ -47,8 +51,6 @@
         }
 
         $scope.renderTree();
-        $scope.updateTreeUi();
-
     }
 
 
