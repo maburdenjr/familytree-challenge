@@ -81,6 +81,10 @@
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
 }
+.tree li a.editme {
+  border: 1px dashed #000;
+  background: #FFFBCC;
+}
 .tree li a:hover, .tree li a:hover + ul li a {
   background: #c8e4f8;
   color: #000;
