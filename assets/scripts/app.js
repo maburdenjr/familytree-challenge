@@ -5,14 +5,16 @@
 
     function FamilyTree($scope, $rootScope) {
 
+        $scope.familytree = {};
+
         $scope.renderTree = function() {
-            var familyTree = {
+
+            var grandChildArray = [];
+            $scope.familytree = {
                 noChildren: [],
                 noSiblings: [],
                 mostGrandchildren: null
-            }
-
-            var grandChildArray = [];
+            };
 
             $('.person').each(function(index) {
                 var childMatch = $(this).siblings('.children').children('li');
@@ -24,18 +26,29 @@
                 $(this).data('childCount', childCount);
 
                 if (childCount === 0) {
-                    familyTree.noChildren.push(personName);
+                    $scope.familytree.noChildren.push(personName);
                 }
                 if (siblingCount === 0) {
-                    familyTree.noSiblings.push(personName);
+                    $scope.familytree.noSiblings.push(personName);
                 }
                 grandChildArray[grandchildCount] = personName;
             })
-            familyTree.mostGrandchildren = grandChildArray[grandChildArray.length-1];
-            return familyTree;
+            $scope.familytree.mostGrandchildren = grandChildArray[grandChildArray.length-1];
         }
 
-        var relationships = $scope.renderTree();
+        $scope.updateTreeUi = function() {
+            setTimeout(function() {
+                $scope.$apply(function () {
+                    $scope.nosiblings = $scope.familytree.noSiblings.join(", ");
+                    $scope.nochildren = $scope.familytree.noChildren.join(', ');
+                    $scope.mostgrandchildren = $scope.familytree.mostGrandchildren;
+                })
+            }, 0);
+        }
+
+        $scope.renderTree();
+        $scope.updateTreeUi();
+
     }
 
 

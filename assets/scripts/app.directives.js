@@ -15,6 +15,7 @@
                             $(this).siblings('.children').append($compile(newSibling)(scope));
                         }
                         scope.renderTree();
+                        scope.updateTreeUi();
                     })
 
                     //Hit escape to delete child element
@@ -24,15 +25,17 @@
                         if(event.which == 27){
                             var deleteElement = confirm("Are you sure you want to remove "+personName+" and his/her descendants from the family tree.");
                             if (deleteElement == true) {
-                                if ($(this).parent().parent().siblings('.person').data('childCount') >= 1) {
+                                if ($(this).parent().parent().siblings('.person').data('childCount') >= 2) {
                                     $(this).parent().remove();
                                 } else {
                                     $(this).parent().parent().remove();
                                 }
                                 scope.renderTree();
+                                scope.updateTreeUi();
                             }
                         }
                     });
+
                 }
             }
         });

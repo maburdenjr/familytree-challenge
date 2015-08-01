@@ -9,8 +9,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/app.css">
 </head>
-<body data-ng-app="app" id="app" data-ng-controller="FamilyTree">
+<body data-ng-app="app" id="app" data-ng-controller="FamilyTree" class="ng-cloak">
     <div class="container">
+        <div class="row">
+            <h1 class="page-header">Family Tree Challenge</h1>
+            <h5>Some Instructions</h5>
+            <ul>
+                <li><code>Double-click</code> on any member of the family tree to add a direct descendant. Dynamic descendants will have a yellow background with a broken border.  Descendant names are editable, but the names in the original family tree are not.</li>
+                <li>Press the <code>esc</code> key after you click on any family member to delete that member and his/her descendants.</li>
+            </ul>
+        </div>
         <div class="row">
             <div class="tree">
                 <ul>
@@ -46,6 +54,16 @@
                             </li>
                         </ul>
                     </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="tree-data">
+                <h5>Family Tree Analysis</h5>
+                <ul>
+                    <li>The names of people with no siblings are: <code>{{nosiblings}}</code></li>
+                    <li>The names of people with no children are: <code>{{nochildren}}</code></li>
+                    <li><code>{{mostgrandchildren}}</code> has the most grand children.</li>
                 </ul>
             </div>
         </div>
