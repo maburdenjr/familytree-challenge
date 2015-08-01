@@ -1,16 +1,60 @@
 <!doctype html>
-<!--[if lt IE 8]><html class="no-js lt-ie8"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
     <title>Family Tree Challenge</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,500,700,300,300italic,500italic|Roboto+Condensed:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/app.css">
 </head>
-<body data-ng-app="app" id="app">
+<body data-ng-app="app" id="app" data-ng-controller="FamilyTree">
+    <div class="container">
+        <div class="row">
+            <div class="tree">
+                <ul>
+                    <li><a href="#">Nancy</a>
+                        <ul class="children">
+                            <li><a href="#">Adam</a></li>
+                            <li><a href="#">Jill</a>
+                                <ul>
+                                    <li><a href="#">Kevin</a>
+                                        <ul class="children">
+                                            <li><a href="#">Samuel</a></li>
+                                            <li><a href="#">George</a>
+                                                <ul class="children">
+                                                    <li><a href="#">Patrick</a></li>
+                                                    <li><a href="#">Robert</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">James</a>
+                                                <ul class="children">
+                                                    <li><a href="#">Mary</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Aaron</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Carl</a>
+                                <ul class="children">
+                                    <li><a href="#">Catherine</a></li>
+                                    <li><a href="#">Joseph</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-<script src="assets/scripts/app.module.js"></script>
-</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="assets/scripts/app.js"></script>
+    </body>
 </html>
