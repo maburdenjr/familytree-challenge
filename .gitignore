@@ -6,4 +6,5 @@
 out
 gen
 .sass-cache
+.DS_Store
 
