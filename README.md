@@ -17,4 +17,3 @@ Press the esc key after you click on any family member to delete that member and
 
 ![Screenshot](https://github.com/maburdenjr/familytree-challenge/blob/master/assets/images/screeshot.png)
 
-ß
