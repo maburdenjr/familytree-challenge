@@ -13,6 +13,10 @@ Implement at least 2 of the followings:
 Double-click on any member of the family tree to add a direct descendant. Dynamic descendants will have a yellow background with a broken border. Descendant names are editable, but the names in the original family tree are not.
 Press the esc key after you click on any family member to delete that member and his/her descendants.
 
+## Online Demo
+
+https://maburdenjr.github.io/familytree-challenge
+
 ## Screenshot of Completed Assessment
 
 ![Screenshot](https://github.com/maburdenjr/familytree-challenge/blob/master/assets/images/screeshot.png)
